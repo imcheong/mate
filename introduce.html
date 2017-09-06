@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>소개 페이지</title>
+    <style media="screen">
+      .w3-btn {margin-bottom:10px;}
+      .color{background-color: #FDC74D;}
+    </style>
+    <script type="text/javascript">
+      $(window).resize(function(){resizeYoutube();});
+      $(function(){resizeYoutube();});
+      function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 480 / 854 ) + "px");} }); }
+
+      function w3_open() {
+          document.getElementById("mySidebar").style.display = "block";
+          document.getElementById("myOverlay").style.display = "block";
+      }
+      function w3_close() {
+          document.getElementById("mySidebar").style.display = "none";
+          document.getElementById("myOverlay").style.display = "none";
+      }
+      </script>
+    </head>
+<body>
+    <iframe width="100%" height="300" src="https://www.youtube.com/embed/pv4C9OzwLqc" frameborder="0" allowfullscreen></iframe>
+    <div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+    <button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Close &times;</button>
+    <a href="#" class="w3-bar-item w3-button">팩트체크</a>
+    <a href="#" class="w3-bar-item w3-button">전시메이트</a>
+    <a href="#" class="w3-bar-item w3-button">앱앤미 화이팅</a>
+  </div>
+
+  <!-- Page Content -->
+  <div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+  <div>
+    <button class="w3-button w3-white w3-xxlarge" onclick="w3_open()">&#9776;</button>
+    <div class="w3-container">
+      <h3>스낵먹으러과자</h3>
+      <p>스낵먹으러 과자는 우리가 많이 먹는 과자의 가성비를 알려줍니다. 왜냐구요? 저희는 돈이 없는 가난한 학생들이기 때문이죠ㅜㅜ 더 싼 값에 맛있는 과자들을 왕창 먹고싶은 제 마음 아무도 몰라주는건 아니겠죠? 그만큼 이건 좋은 앱이예요 무려 STAC에서 2016년도 은상을 받았죠
+         어때요? 이 앱 한번 깔아보고 싶지 않나요?</p>
+      <p>애베베ㅔㅂ베베베베베베베 앱앤미 화이팅 -아름다운 임청이-</p>
+      <p><center><button class="w3-btn color w3-border w3-round-large "><a href="givescore.html">평가하러가기</a></button></p>
+    </div>
+  </div>
+  <div align=center>
+    <img src="img/mirim.jpg" alt="" width="40" height="40">총 52명의 관람객들이 다녀갔습니다. 평균 별점 : ★★★★
+  </div>
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>감사합니다</title>
+    <script type="text/javascript">
+  <!--
+  function display(){
+      rtime=etime-ctime;
+
+      if (rtime>60)
+          m=parseInt(rtime/60);
+      else{
+          m=0;
+      }
+      s=parseInt(rtime-m*60);
+
+      if(s<10)
+          s="0"+s
+          window.status="Time Remaining :  "+m+":"+s
+          window.setTimeout("checktime()",1000)
+        }
+
+        function settimes(){
+        var time= new Date();
+            hours= time.getHours();
+            mins= time.getMinutes();
+            secs= time.getSeconds();
+            etime=hours*3600+mins*60+secs;
+            etime+=4;  //10= 10초
+            checktime();
+        }
+
+        function checktime(){
+            var time= new Date();
+                hours= time.getHours();
+                mins= time.getMinutes();
+                secs= time.getSeconds();
+                ctime=hours*3600+mins*60+secs
+            if(ctime>=etime){
+                expired();
+            }
+            else
+                display();
+        }
+
+        function expired(){
+            location.href="introduce.html";  //지정된 시간 이후 이동할 페이지 주소
+      }
+      </script>
+  </head>
+  <body onLoad="settimes()">
+    <table align=center>
+      <tr>
+        <td>  <center><img src="img/final.png" alt=""></td>
+      </tr>
+      <tr align=center>
+          <td><img src="img/giphy.gif" alt="" width="300" height="300"></td>
+      </tr>
+      <tr>
+        <td align=center>다시 처음화면으로 이동합니다.</td>
+      </tr>
+    </table>
+  </body>
+</html>
